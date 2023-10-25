@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    width: 1920px;
+    height: 1080px;
+    text-align: center;
+    
+}
+
+.ticker {
+   position: relative; 
+   top: 90%;
+   width: 60%;
+   margin: auto;
+}
+
+table, th, td {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#player-1-name, #player-2-name, #player-1-score, #player-2-score {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#home-club {
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(56,56,56,1) 54%);
+    font-size: 18px;
+    padding: 3px;
+}
+
+#player-1-name, #player-2-name {
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgb(5,36,0);
+    background: linear-gradient(0deg, rgba(5,36,0,1) 0%, rgba(29,121,9,1) 33%, rgba(0,255,100,1) 100%); 
+    overflow: hidden;
+    width: 45%;
+}
+
+#player-1-club, #player-2-club {
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(56,56,56,1) 54%); 
+}
+
+#player-1-score, #player-2-score {
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(56,56,56,1) 54%); 
+    border: 1px solid white;
+    width: 5%;
+}

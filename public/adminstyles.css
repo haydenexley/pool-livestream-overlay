@@ -1,0 +1,37 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.club-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 30px;
+    background-color: #f2f2f2;
+}
+
+.player-1-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+}
+
+.player-2-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+}
+
+label {
+    margin: 5px;
+}

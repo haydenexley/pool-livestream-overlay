@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/adminstyles.css">
+    <title>Socket.IO chat</title>
+  </head>
+  <body>
+    <form id="form" action="">
+        <div class="club-details">
+            <label for="home-club">Home Club: </label>
+            <input id="home-club" name="home-club" autocomplete="off" />
+        </div>
+      <div class="player-1-details">
+        <label for="player-1-name">Player 1 Name: </label>
+        <input id="player-1-name" name="player-1-name" autocomplete="off" />
+        <label for="player-1-club">Player 1 Club: </label>
+        <input id="player-1-club" name="player-1-club" autocomplete="off" />
+        <label for="player-1-score">Player 1 Score: </label>
+        <input id="player-1-score" name="player-1-score" autocomplete="off" />
+      </div>
+      <div class="player-2-details">
+        <label for="player-2-name">Player 2 Name: </label>
+        <input id="player-2-name" name="player-2-name" autocomplete="off" />
+        <label for="player-2-club">Player 2 Club: </label>
+        <input id="player-2-club" name="player-2-club" autocomplete="off" />
+        <label for="player-2-score">Player 2 Score: </label>
+        <input id="player-2-score" name="player-2-score" autocomplete="off" />
+      </div>    
+      <button>Update</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const matchObj = Object.fromEntries(formData);
+        socket.emit('update', matchObj);
+        console.log(matchObj);
+      });
+    </script>
+  </body>
+</html>
+
